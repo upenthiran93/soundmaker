@@ -33,16 +33,44 @@ body{
 .button-group{
 grid-column: 2/7;
     grid-row: 3/6;
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
 .sound-button{
-    width: 300px;
+    width: 150px;
+    min-width: 50px;
     height: 300px;
-    background-color: #69b6c7;
+    background-image: -moz-radial-gradient(50% -20%, circle,  #69b6c7 -10%, #209cb8 85%, #1e7f9c 110%, #1a5f7e);
     border-radius: 20px;
-    box-shadow: 6px 12px 22px rgba(0, 0, 0, 0.3),
-    -3px -3px 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 6px 12px 30px rgba(0, 0, 0, 0.3)
+}
+.sound-button:active {
+    background-image: -moz-radial-gradient(50% -20%, circle, #8ed2e1 -10%, #209cb8 65%, #1e7f9c 100%, #1a5f7e);
+    transform: scale(0.99);
+    box-shadow: 2px -5px 10px rgba(0, 0, 0, 0.5),
+    -3px -3px 5px rgba(255, 255, 255, 0.2);
+    text-shadow: 1px 1px 3px #1a5f7e, 0 0 1em white, 0 0 0.2em white;
+    transition: all 0.2s ease;
+}
+.keyPressed{
+    background-image: -moz-radial-gradient(50% -20%, circle, #8ed2e1 -10%, #209cb8 65%, #1e7f9c 100%, #1a5f7e);
+    transform: scale(0.99);
+    box-shadow: 2px -5px 10px rgba(0, 0, 0, 0.5),
+    -3px -3px 5px rgba(255, 255, 255, 0.2);
+    text-shadow: 1px 1px 3px #1a5f7e, 0 0 1em white, 0 0 0.2em white;
+    transition: all 0.2s ease;
+}
+
+.text-center{
+    color: white;
+    font-size: 20px ;
+    font-family: 'Concert One', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
